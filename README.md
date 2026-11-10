@@ -412,7 +412,7 @@ Start MongoDB and confirm it is listening on `127.0.0.1:27017`. The default URI 
 mongodb://127.0.0.1:27017/bugtrail
 ```
 
-Mongoose creates the `bugtrail` database and its collections on first write. There is no migration or seed script.
+MongoDB creates the `bugtrail` database and its collections on first write. There is no migration or seed script.
 
 **MongoDB Atlas**
 
@@ -738,7 +738,7 @@ Errors use a consistent JSON shape:
 
 | Status | Meaning |
 | --- | --- |
-| `400` | Malformed JSON, invalid identifier, or another bad request |
+| `400` | Malformed JSON, a Mongoose cast error, or another bad request. Invalid or missing bug IDs on bug routes return `404`. |
 | `401` | Missing, invalid or expired session; incorrect login credentials |
 | `404` | Bug or API route not found; includes cross-user bug IDs |
 | `409` | Email address already registered |
