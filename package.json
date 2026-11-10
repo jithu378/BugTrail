@@ -1,0 +1,19 @@
+{
+  "name": "bugtrail",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BugTrail - Developer Bug Tracking & Debugging Journal (MERN)",
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "dev": "node scripts/dev.js",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "test": "npm --prefix backend test",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix backend start"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
